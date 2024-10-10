@@ -43,11 +43,11 @@ public class SearchResult extends Base {
 
     public void clickRating(String star)
     {
-        By ratingElement = By.xpath("//div[@data-filters-item='class:class="+star+"']");
-       // clickOn(ratingElement);
+        By ratingElement = By.xpath("//div[@data-filters-group='class']//input[@name='class="+star+"']");
+        clickOn(ratingElement);
 
-        JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("arguments[0].click()",webAction(ratingElement));
+       /* JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click()",webAction(ratingElement));*/
     }
 
     By closePopUp = By.xpath("//button[contains(@aria-label,'Dismiss')]");

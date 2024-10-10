@@ -73,6 +73,8 @@ public class BookingsSD {
     public void iSelectOptionForStarsAs(String star) //5 stars
     {
 
+     /*   String[] stArr = star.split(""); // {"5","stars"}
+        stArr[0] */
         searchResult.clickRating(star.split(" ")[0]);
     }
 
